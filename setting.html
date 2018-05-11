@@ -1,0 +1,41 @@
+<!doctype html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link href="css/mui.min.css" rel="stylesheet" />
+	</head>
+
+	<body>
+		<script src="js/mui.min.js"></script>
+		<script type="text/javascript">
+			mui.init()
+			    mui.plusReady(function(){
+    	document.getElementById("back").addEventListener('tap',function(){
+    		mui.openWindow({
+    			url:"me.html",
+    			id:"me.html"
+    		});
+    	});
+
+    })
+		</script>
+		<header class="mui-bar mui-bar-nav">
+		    <a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left" id="back"></a>
+		    <h1 class="mui-title"><b>设置</b></h1>
+		</header>
+		<div class="mui-content">
+	<ul class="mui-table-view">
+	    <li class="mui-table-view-cell">版本更新</li>
+	    <li class="mui-table-view-cell">帮助</li>
+	    <li class="mui-table-view-cell">关于</li>
+    </ul>
+ 	
+ 	<button type="button" class="mui-btn mui-btn-red" style="display:table;margin:10px auto;width:300px;margin-top:20px;">退出</button>
+		</div>
+
+	</body>
+
+</html>

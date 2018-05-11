@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+    <title></title>
+    <script src="js/mui.min.js"></script>
+    <link href="css/mui.min.css" rel="stylesheet"/>
+    <link href="css/style.css" rel="stylesheet" />
+    <link rel="stylesheet" href="css/iconfont.css" />
+    <script type="text/javascript" charset="utf-8">
+      	mui.init();
+      	mui.plusReady(function(){
+      		plus.webview.close("index.html");
+            var arr =document.getElementsByClassName("mui-tab-item");
+            var objYe = ["pmh.html","video.html","index.html","xx.html","me.html"];
+            var objStyle = {
+                 top:"0px",
+          bottom:"51px",
+            };
+            var objs=[];
+            var self = plus.webview.currentWebview();//取到当前的主页窗口
+            for (var i=0;i<arr.length;i++){
+            !function(i){
+            var obj = plus.webview.create(objYe[i],objYe[i],objStyle);
+             objs.push(obj);
+             arr[i].addEventListener("tap",function(){
+                for(var j=0;j<arr.length;j++){
+                	
+                    if(j!=i){objs[j].hide();
+                    objs[2].hide();}
+                    else{objs[j].show()}
+                }
+                self.append(objs[i])
+             })
+             }(i)
+            };
+                	document.getElementById("moment").addEventListener('tap',function(){
+    		mui.openWindow({
+    			url:"moment.html",
+    			id:"moment.html"
+    		});
+    	});
+    		document.getElementById("jh").addEventListener('tap',function(){
+    		mui.openWindow({
+    			url:"jh.html",
+    			id:"jh.html"
+    		});
+    	});
+    	    document.getElementById("baishi").addEventListener('tap',function(){
+    		mui.openWindow({
+    			url:"baishi.html",
+    			id:"baishi.html"
+    		});
+    	});
+    	    document.getElementById("shoutu").addEventListener('tap',function(){
+    		mui.openWindow({
+    			url:"shoutu.html",
+    			id:"shoutu.html"
+    		});
+    	});
+             //mui.trigger(arr[2],"tap");   //开始页面
+            })
+    </script>
+
+</head>
+<body>
+<header class="mui-bar mui-bar-nav">
+
+        <h1 class="mui-title"><b>人人行</b></h1>
+  </header>
+   <div class="mui-content" >
+<ul class='mui-table-view mui-grid-view mui-grid-9' style="padding:95px 0px;">  
+	<li class='mui-table-view-cell mui-media mui-col-xs-6 mui-col-sm-3'>  
+	<a href='#' id="jh">  
+	<span class='mui-icon iconfont icon-shuaxin' style="font-size: 65px;"></span>  
+	<div class='mui-media-body'>江湖结缘</div>  
+	</a>  
+	</li>  ``
+	<li class='mui-table-view-cell mui-media mui-col-xs-6 mui-col-sm-3'>  
+	<a href='#' id="baishi">  
+	<span class='mui-icon iconfont icon-chengjiu' style="font-size: 65px;">
+	<div class='mui-media-body'>拜Ta为师</div>  
+	</a>  
+	</li>  
+	<li class='mui-table-view-cell mui-media mui-col-xs-6 mui-col-sm-3'>  
+	<a href='#' id="shoutu">  
+	<span class='mui-icon iconfont icon-shejiao' style="font-size: 65px;"></span>  
+	<div class='mui-media-body'>收Ta为徒</div>  
+	</a>  
+	</li>  
+	<li class='mui-table-view-cell mui-media mui-col-xs-6 mui-col-sm-3'>  
+	<a href='#' id="moment">  
+	<span class='mui-icon iconfont icon-mulu' style="font-size: 65px;"></span>  
+	<div class='mui-media-body'>师门任务</div>  
+	</a>  
+	</li>  
+</ul>  
+</div>
+
+
+ <nav class="mui-bar mui-bar-tab" >
+    <a class="mui-tab-item " href="pmh.html">
+        <span class="mui-icon iconfont icon-shouye"></span>
+        <span class="mui-tab-label">拍卖行</span>
+    </a>
+    <a class="mui-tab-item" href="video.html">
+        <span class="mui-icon iconfont icon-tupian"></span>
+        <span class="mui-tab-label">小视频</span>
+    </a>
+    <a class="mui-tab-item mui-active" href="index.html">
+        <span class="mui-icon mui-icon-spinner mui-spin" ></span>
+        <span class="mui-tab-label">江湖</span>
+    </a>
+        <a class="mui-tab-item" href="xx.html">
+        <span class="mui-icon iconfont icon-xinxi"></span>
+        <span class="mui-tab-label">消息</span>
+    </a>
+    <a class="mui-tab-item" href="me.html">
+        <span class="mui-icon iconfont icon-geren"></span>
+        <span class="mui-tab-label">我的</span>
+    </a>
+</nav>
+
+
+</body>
+</html>

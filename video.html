@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		 <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+    <title></title>
+    <script src="js/mui.min.js"></script>
+    <link href="css/mui.min.css" rel="stylesheet"/>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.0.2/js/swiper.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.0.2/js/swiper.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.0.2/js/swiper.esm.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.0.2/js/swiper.esm.bundle.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.0.2/css/swiper.min.css">
+    <script type="text/javascript" charset="utf-8">
+    mui.init();
+    mui.plusReady(function(){
+    	
+    	document.getElementById("video1").addEventListener('tap',function(){
+    		mui.openWindow({
+    			url:"video1.html",
+    			id:"video1.html"
+    		});
+    	});
+     	document.getElementById('add').addEventListener('tap', function() {  
+    if (mui.os.plus) {  
+        var buttonTit = [{  
+            title: "拍照"  
+        }, {  
+            title: "从手机相册选择"  
+        }];  
+          
+        plus.nativeUI.actionSheet({  
+            title: "上传图片/视频",  
+            cancel: "取消",  
+            buttons: buttonTit  
+        }, function(b) { /*actionSheet 按钮点击事件*/  
+            switch (b.index) {  
+                case 0:  
+                    break;  
+                case 1:  
+                    getImage(); /*拍照*/  
+                    break;  
+                case 2:  
+                    galleryImg();/*打开相册*/  
+                    break;  
+                default:  
+                    break;  
+            }  
+        })  
+    }          
+}, false);  
+// 从相册中选择图片   
+function galleryImg(){  
+    // 从相册中选择图片  
+    plus.gallery.pick( function(e){  
+        for(var i in e.files){  
+            var fileSrc = e.files[i]  
+            setHtml(fileSrc);  
+        }  
+    }, function ( e ) {  
+        console.log( "取消选择图片" );  
+    },{  
+        filter: "image",  
+        multiple: true,  
+        maximum: 5,  
+        system: false,  
+        onmaxed: function() {  
+            plus.nativeUI.alert('最多只能选择5张图片');  
+        }  
+    });  
+};
+
+// 拍照获取图片  
+function getImage() {  
+    var c = plus.camera.getCamera();  
+    c.captureImage(function(e) {  
+        plus.io.resolveLocalFileSystemURL(e, function(entry) {  
+            var imgSrc = entry.toLocalURL() + "?version=" + new Date().getTime(); //拿到图片路径  
+              
+            setHtml(imgSrc);  
+        }, function(e) {  
+            console.log("读取拍照文件错误：" + e.message);  
+        });  
+    }, function(s) {  
+        console.log("error" + s);  
+    }, {  
+        filename: "_doc/camera/"  
+    })  
+}  
+})
+    </script>
+
+ 
+ <style>
+    body {
+      background: #fff;
+      font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+      font-size: 14px;
+      color:#000;
+      margin: 0;
+      padding: 0;
+    }
+    .swiper-container {
+      width: 100%;
+      padding-top: 50px;
+      padding-bottom: 50px;
+    }
+    .swiper-slide {
+      background-position: center;
+      background-size: cover;
+      width: 300px;
+      height: 300px;
+
+    }
+  </style>
+	</head>
+	<body>
+ 		<header class="mui-bar mui-bar-nav">
+		    <a class="mui-icon mui-icon-plus mui-pull-right" id="add" ></a>
+		    <h1 class="mui-title"><b>小视频</b></h1>
+    </header>
+     </div>
+	<div class="mui-slider " style="margin-top:-15px;">
+           <div class="mui-slider-group">
+           	
+                   <div class="mui-slider-item">
+                   <a href="#">
+                       <img src="image/load4.jpg">
+                       <p class="mui-slider-title">大吉大利，今晚吃鸡！</p>
+                   </a>
+               </div>
+               
+               <div class="mui-slider-item">
+                   <a href="#">
+                       <img src="image/load6.jpg">
+                       <p class="mui-slider-title">三星S9评测</p>
+                   </a>
+               </div>
+               
+               <div class="mui-slider-item">
+                   <a href="#">
+                       <img src="image/load5.jpg" >
+                       <p class="mui-slider-title">AI简单实践</p>
+                   </a>
+               </div>
+               
+           </div>
+           <!--注意这里面是图片滚动的标记，div的数量要和上面的匹配-->
+           <div class="mui-slider-indicator">
+               <div class="mui-indicator mui-active"></div>
+               <div class="mui-indicator"></div>
+               <div class="mui-indicator"></div>
+           </div>
+       </div>
+       </div>
+
+
+<ul class="mui-table-view mui-grid-view">
+<li class="mui-table-view-cell mui-media mui-col-xs-6">
+<a href="#"  id="video1">
+<img class="mui-media-object" src="image/video4.jpg" height="350" width="400">
+</a>
+如何学习翡翠鉴赏
+</li>
+<li class="mui-table-view-cell mui-media mui-col-xs-6">
+<a href="#">
+<img class="mui-media-object" src="image/video2.jpg">
+</a>
+阿冷~吉他弹唱~Baby
+</li>
+<li class="mui-table-view-cell mui-media mui-col-xs-6">
+<a href="#">
+<img class="mui-media-object" src="image/video3.jpg">
+</a>
+技术分析 大盘个股
+</li>
+<li class="mui-table-view-cell mui-media mui-col-xs-6">
+<a href="#">
+<img class="mui-media-object" src="image/video1.jpg">
+</a>
+[菲菲]蒲公英的约定-钢琴版
+</li>
+</ul>
+</body>
+</html>

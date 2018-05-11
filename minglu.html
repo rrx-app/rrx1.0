@@ -1,0 +1,97 @@
+<!doctype html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link href="css/mui.min.css" rel="stylesheet" />
+	</head>
+
+	<body>
+		<script src="js/mui.min.js"></script>
+		<script type="text/javascript">
+			mui.init();
+			mui.plusReady(function(){
+    	document.getElementById("back").addEventListener('tap',function(){
+    		mui.openWindow({
+    			url:"me.html",
+    			id:"me.html"
+    		});
+    	});
+
+    })
+		</script>
+		
+		<header class="mui-bar mui-bar-nav">
+		    <a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left" id="back"></a>
+		    <h1 class="mui-title"><b>名录</b></h1>
+		</header>
+		 <ul class="mui-table-view" style="margin-top:50px"> 
+        <li class="mui-table-view-cell mui-collapse">
+            <a class="mui-navigate-right" href="#">我的师父</a>
+            <div class="mui-collapse-content">
+    <ul class="mui-table-view" style="margin-top:-5px" >
+    <li class="mui-table-view-cell mui-media">
+        <a href="javascript:;" id="a">
+            <img class="mui-media-object mui-pull-left"  src="image/lu.jpg">
+            <div class="mui-media-body">
+                鲁蔚征
+                <p class='mui-ellipsis'>共你踏上一场颜值爆表的摄影之旅</p>
+            </div>
+        </a>
+    </li>
+    <li class="mui-table-view-cell mui-media">
+        <a href="javascript:;">
+            <img class="mui-media-object mui-pull-left" src="image/chat1.jpg">
+            <div class="mui-media-body">
+                Michale
+                <p class='mui-ellipsis'>想找到一个话剧的徒弟</p>
+            </div>
+        </a>
+    </li>
+    <li class="mui-table-view-cell mui-media">
+        <a href="javascript:;">
+            <img class="mui-media-object mui-pull-left" src="image/yh3.jpg">
+            <div class="mui-media-body">
+                hi莉莉
+                <p class='mui-ellipsis'>烤炉模式的城，到黄昏，如同打翻的调色盘一般.</p>
+            </div>
+        </a>
+    </li>
+</ul>
+ 	        </div>
+        </li>
+    </ul>
+    
+     <ul class="mui-table-view" style="margin-top:30px"> 
+        <li class="mui-table-view-cell mui-collapse">
+            <a class="mui-navigate-right" href="#">我的徒弟</a>
+            <div class="mui-collapse-content">
+  <ul class="mui-table-view" style="margin-top:-5px" >
+    <li class="mui-table-view-cell mui-media">
+        <a href="javascript:;" id="chat">
+            <img class="mui-media-object mui-pull-left" src="image/yh2.jpg">
+            <div class="mui-media-body" >
+                幸福
+                <p class='mui-ellipsis'>执子之手，与子偕老</p>
+            </div>
+        </a>
+    </li>
+    <li class="mui-table-view-cell mui-media">
+        <a href="javascript:;">
+            <img class="mui-media-object mui-pull-left" src="image/yh5.jpg">
+            <div class="mui-media-body">
+                木屋
+                <p class='mui-ellipsis'>有没有懂汇编语言的老师</p>
+            </div>
+        </a>
+    </li>
+
+</ul>
+                   </div>
+        </li>
+    </ul>
+	</body>
+
+</html>

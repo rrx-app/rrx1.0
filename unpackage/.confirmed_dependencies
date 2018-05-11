@@ -1,0 +1,94 @@
+{
+	"startup.html": {
+		"refer": [
+			"guide.html"
+		],
+		"resources": []
+	},
+	"index.html": {
+		"resources": [
+			"pmh.html",
+			"xx.html",
+			"video.html"
+		],
+		"refer": [
+			"video.html",
+			"me.html",
+			"xx.html",
+			"pmh.html",
+			"baishi.html",
+			"jh.html",
+			"shoutu.html"
+		]
+	},
+	"guide.html": {
+		"refer": [
+			"index.html"
+		],
+		"resources": []
+	},
+	"me.html": {
+		"refer": [
+			"login.html",
+			"minglu.html"
+		],
+		"resources": []
+	},
+	"xx.html": {
+		"refer": [
+			"chat.html",
+			"chat2.html"
+		],
+		"resources": []
+	},
+	"baishi.html": {
+		"refer": [
+			"index.html",
+			"shifu.html"
+		],
+		"resources": []
+	},
+	"shoutu.html": {
+		"refer": [
+			"index.html"
+		],
+		"resources": []
+	},
+	"jh.html": {
+		"refer": [
+			"label.html",
+			"index.html",
+			"test.html"
+		],
+		"resources": []
+	},
+	"pmh.html": {
+		"refer": [
+			"guiter.html"
+		],
+		"resources": []
+	},
+	"guiter.html": {
+		"refer": [
+			"shifu.html"
+		],
+		"resources": []
+	},
+	"shifu.html": {
+		"refer": [
+			"chat.html",
+			"chat2.html"
+		],
+		"resources": []
+	},
+	"chat2.html": {
+		"refer": [
+			"chat.html"
+		]
+	},
+	"video.html": {
+		"refer": [
+			"video1.html"
+		]
+	}
+}

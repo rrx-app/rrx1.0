@@ -1,0 +1,99 @@
+<!doctype html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link href="css/mui.min.css" rel="stylesheet" />
+	</head>
+
+	<body>
+		<script src="js/mui.min.js"></script>
+		<script type="text/javascript">
+			mui.init()
+		</script>
+		
+		<header class="mui-bar mui-bar-nav">
+			   <a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left" id="back"></a>
+        <h1 class="mui-title"><b>登录</b></h1>
+    </header>
+    <div class="mui-content"  style="margin-top:30px">
+        <form class="mui-input-group">
+            <div class="mui-input-row">
+                <label>帐号</label>
+                <input type="text" class="mui-input-clear" placeholder="请输入帐号名" id="username">
+            </div>
+            <div class="mui-input-row">
+                <label>密码</label>
+                <input type="password" class="mui-input-password" placeholder="请输入密码" id="password">
+            </div>
+        </form>
+        <!--注意：登录按钮不能和账号密码输入框放在一个form里面-->
+        <div class="mui-content-padded" align="center">
+            <button type="button" class="mui-btn mui-btn-blue" style="width:100px;margin-right:15px" id="login">登陆</button>
+            <button type="button" class="mui-btn mui-btn-green" style="width:100px" id="reg">注册</button>
+        </div>
+    </div>
+
+<script type="text/javascript" charset="utf-8">
+        mui.init();
+        mui.plusReady(function(){
+            var reg=document.getElementById("reg");
+            var login=document.getElementById("login");
+            var back=document.getElementById("back");
+                        back.addEventListener('tap',function(){
+                mui.openWindow({
+                    url:'me.html',
+                    id:'me.html'
+                })
+            });
+            reg.addEventListener('tap',function(){
+                mui.openWindow({
+                    url:'reg.html',
+                    id:'reg'
+                })
+            });
+            login.addEventListener('tap',function(){
+                var username=document.getElementById("username");
+                var password=document.getElementById("password");
+                if(username.value.length==0){
+                    plus.ui.toast("用户名不能为空");
+                    return;
+                }
+                if(password.value.length==0){
+                    plus.ui.toast("密码不能为空");
+                    return;
+                }
+               /* mui.ajax('http://192.168.0.7/newssystem/index.php/Home/User/login',{
+                    data:{
+                        username:username.value,
+                        password:password.value
+                    },
+                    dataType:'json',
+                    type:'POST',
+                    timeout:10000,
+                    success:function(data){
+                        //{"reslut":1}
+                        if(data.result==1){
+                            //登录成功
+                            plus.ui.toast("登录成功");
+                            mui.openWindow({
+                                url:'list.html',
+                                id:'list'
+                            })
+                        }else{
+                            //登录失败
+                            plus.ui.toast(data.data);
+                        }
+                    },
+                    error:function(){
+                    } */
+  
+            })
+
+        })
+    </script>
+	</body>
+
+</html>

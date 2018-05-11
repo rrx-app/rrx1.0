@@ -1,0 +1,50 @@
+<!doctype html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link href="css/mui.min.css" rel="stylesheet" />
+	</head>
+
+	<body>
+		<script src="js/mui.min.js"></script>
+		<script type="text/javascript">
+						mui.init()
+			    mui.plusReady(function(){
+    	document.getElementById("back").addEventListener('tap',function(){
+    		mui.openWindow({
+    			url:"jh.html",
+    			id:"jh.html"
+    		});
+    	});
+
+    })
+		</script>
+		<header class="mui-bar mui-bar-nav">
+		    <a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left" id="back"></a>
+		    <h1 class="mui-title"><b>测试题</b></h1>
+		</header>
+    <div style="margin-top: 50px;">
+    <h5 class="mui-content-padded">到了新环境，你会</h5>  
+            <div class="mui-card">  
+                <form class="mui-input-group">  
+                    <div class="mui-input-row mui-checkbox">  
+                        <label>把生活安排得跟以前不一样</label>  
+                        <input name="checkbox1" value="Item 3" type="checkbox" >  
+                    </div>  
+                    <div class="mui-input-row mui-checkbox">  
+                        <label>随着环境变化，适当做一些改变</label>  
+                        <input name="checkbox1" value="Item 4" type="checkbox" checked>  
+                    </div>  
+                     <div class="mui-input-row mui-checkbox">  
+                        <label>把生活安排的和从前相仿</label>  
+                        <input name="checkbox1" value="Item 4" type="checkbox" checked>  
+                    </div>              
+                </form>  
+            </div>  
+            </div>
+	</body>
+
+</html>

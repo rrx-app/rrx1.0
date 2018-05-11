@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		 <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+    <title></title>
+    <script src="js/mui.min.js"></script>
+    <link href="css/mui.min.css" rel="stylesheet"/>
+    <link href="css/style.css" rel="stylesheet" />
+   	<style type="text/css">
+   		
+   		.mui-bar .mui-tatle{
+   			right: 80px;
+   			left: 80px;
+   		}
+   		
+   		#goTopBtn{
+   			position:fixed;
+   			line-height:36px;
+   			width:36px;
+   			bottom:35px;
+   			height:36px;
+   			cursor:pointer;
+   			display:none;
+   			background:url(images/returnTop.png);
+   		}
+   	</style>
+   	
+   	<script type="text/javascript">
+			mui.init()
+			    mui.plusReady(function(){
+    	document.getElementById("guiter").addEventListener('tap',function(){
+    		mui.openWindow({
+    			url:"guiter.html",
+    			id:"guiter.html"
+    		});
+    	});
+
+    })
+		</script>
+  
+
+	</head>
+	<body>
+  	<header class="mui-bar mui-bar-nav">
+        <h1 class="mui-title"><b>拍卖行</b></h1>
+    </header>
+    <div class="mui-content">
+    <div class="mui-input-row mui-search" >
+    <input type="search" class="mui-input-clear" placeholder="">
+</div>
+	<div class="mui-slider " style="margin-top:-15px;">
+           <div class="mui-slider-group">
+           	
+                   <div class="mui-slider-item">
+                   <a href="#">
+                       <img src="image/load3.png">
+                       <p class="mui-slider-title">本周线下活动——茶道教学</p>
+                   </a>
+               </div>
+               
+               <div class="mui-slider-item">
+                   <a href="#">
+                       <img src="image/load2.jpg">
+                       <p class="mui-slider-title">“宝贝拍卖”主题活动</p>
+                   </a>
+               </div>
+               
+               <div class="mui-slider-item">
+                   <a href="#">
+                       <img src="image/load1.jpg" height="350" width="400">
+                       <p class="mui-slider-title">“七日师徒”————为你匹配最默契的师徒</p>
+                   </a>
+               </div>
+               
+           </div>
+           <!--注意这里面是图片滚动的标记，div的数量要和上面的匹配-->
+           <div class="mui-slider-indicator">
+               <div class="mui-indicator mui-active"></div>
+               <div class="mui-indicator"></div>
+               <div class="mui-indicator"></div>
+           </div>
+       </div>
+       </div>
+<ul class="mui-table-view mui-grid-view">
+<li class="mui-table-view-cell mui-media mui-col-xs-6">
+<a href="#" id="guiter">
+<img class="mui-media-object" src="image/camera1.jpg">
+</a>
+相机
+</li>
+<li class="mui-table-view-cell mui-media mui-col-xs-6">
+<a href="#">
+<img class="mui-media-object" src="image/violin.jpg">
+</a>
+小提琴
+</li>
+<li class="mui-table-view-cell mui-media mui-col-xs-6">
+<a href="#">
+<img class="mui-media-object" src="image/basketball.jpg">
+</a>
+篮球
+</li>
+<li class="mui-table-view-cell mui-media mui-col-xs-6">
+<a href="#">
+<img class="mui-media-object" src="image/guiter1.jpg">
+</a>
+吉他
+</li>
+<li class="mui-table-view-cell mui-media mui-col-xs-6">
+<a href="#">
+<img class="mui-media-object" src="image/book.jpg">
+</a>
+高数课本
+</li>
+<li class="mui-table-view-cell mui-media mui-col-xs-6">
+<a href="#">
+<img class="mui-media-object" src="image/chess.jpg">
+</a>
+象棋
+</li>
+</ul>
+
+	</body>
+</html>
